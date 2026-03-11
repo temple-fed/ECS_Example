@@ -25,7 +25,7 @@ int CreateWindow(window_t *window, const char *title, size_t sx, size_t sy){
    }
    
 #  ifdef _WIN32
-   { /* Make it not ugly... */
+   { /* Make it look nicer on windows */
       extern
       int w32FixWindowLook(SDL_Window *w);
       
