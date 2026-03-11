@@ -6,6 +6,7 @@ This simple demo is not a 1-to-1 of how i would do everything in a production pr
 The project depends only on SDL3 for two (2) important reasons:
 - To showcase abstracting a pre-existing API and object (struct) into a component
 - Show something more interesting than some console output
+
 It is required you have SDL3 and the relevant `pkg-config` to build the project.
 If you are using MSVC for some reason, and want to build the project, create a solution and set up your SDL3 dependency in your PATH manually.
 
