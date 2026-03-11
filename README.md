@@ -33,5 +33,10 @@ Everything is in the `.bss` segment as static globals, but the system contains a
 My map implementation maps an ID to a structure using two 1D arrays (one ID array, and one struct array), which are provided by the API User.
 ID generation uses the SplitMix64 algorithm, because it has very good bit coverage. Usually bit coverage does not matter too much, but ECSs can be used for very intensive tasks with many entities.
 
+## Cool facts
+Running `find . -name "*.c" -o -name "*.h" | xargs wc -l`, the whole project is around ~500 significant lines. A simple component can be around ~40 lines, the system itself is suprisingly smaller than the map implementation and rendering code too.
+
+Running `size app -A` gives us a good idea of how much memory the globals take. `.bss` is the largest section, because around 4 mb is utilized by the entity registry.
+
 ---
 Enjoy! - temple-fed | License : GPL3 (See LICENSE file)
