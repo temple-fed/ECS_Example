@@ -73,7 +73,8 @@ void FinishRender(window_t *window){
 void Render(window_t *window, color_t *color, SDL_Rect *rect){
    SDL_FRect temp;
    static color_t dbg = {{255, 0, 180}};
-   
+
+   if (rect == NULL) return;
    if (color == NULL) {
       color = &dbg; /* Purple-pink debug color if no color. */
    }
@@ -94,8 +95,6 @@ void RenderEntity(window_t *window, id_t id){
    
    rect = Rect_Get(id);
    clr  = Color_Get(id);
-   
-   if (rect == NULL) return;
    
    Render(window, clr, rect);
    
