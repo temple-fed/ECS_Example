@@ -14,11 +14,13 @@ If you are using MSVC for some reason, and want to build the project, create a s
 What is the Component API?
 
 - It is the API a given component uses to implement its functionality, it does not include the `map.h` utility, just `component.h`.
+  
   exposed in : `inc/ecs/component.h`
   implementation : `src/ecs.c`
   
 What is the Entity API?
 - It is the API that allows registration/unregistration of entities.
+  
   exposed in : `inc/ecs/entity.h`
   implementation : `src/ecs.c`
 
