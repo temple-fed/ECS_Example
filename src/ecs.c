@@ -89,6 +89,25 @@ void EntityAdd(id_t ent, id_t cmp){
    return;
 }
 
+void EntityRmv(id_t ent, id_t cmp){
+   entinfo_t *entinf;
+   size_t i = 0;
+   
+   entinf = MapGet(&entmap, ent);
+   
+   while (i < entinf->cnt){
+      if (entinf->ids[i] == cmp){
+         memmove(&entinf->ids[i], &entinf->ids[i+1], (entinf->cnt - i - 1) * sizeof(id_t));
+         entinf->cnt --;
+         return;
+      }
+      
+      i ++;
+   }
+   
+   return;
+}
+
 /* --- Misc --- */
 
 void FreeECS(void){

@@ -16,5 +16,6 @@ void UnregisterComponent(id_t id);
 void EnsureComponent(id_t *id, remove_ft rmv, unreg_ft unr);
 
 void EntityAdd(id_t ent, id_t cmp); /* Adds a mapping between an entity ID and a component ID, that the entity 'owns'. */
+void EntityRmv(id_t ent, id_t cmp); /* Removes a mapping between an entity ID and a componet ID. */
 
 #endif /* COMPONENT_H_ EOF */

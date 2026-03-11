@@ -19,6 +19,7 @@ color_t *Color_Add(id_t id, int r, int g, int b){
    color_t *c;
    
    EnsureComponent(&self, Color_Rmv, _Unreg);
+   EntityAdd(id, self);
    
    c = MapReserve(&map, id);
    c->color[0] = r;
@@ -32,6 +33,7 @@ color_t *Color_Add(id_t id, int r, int g, int b){
 
 void Color_Rmv(id_t id){
    MapRelease(&map, id);
+   EntityRmv(id, self);
    return;
 }
 
