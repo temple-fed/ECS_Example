@@ -5,8 +5,8 @@
 static window_t window;
 
 int main(void){
-   static id_t sqr1;
-   static id_t sqr2;
+   id_t sqr1;
+   id_t sqr2;
    
    SDL_Rect *r;
    
