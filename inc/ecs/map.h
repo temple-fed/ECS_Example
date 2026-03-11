@@ -3,7 +3,7 @@
 
 #include <types.h>
 
-/* Fixed sized hashkey map. Revision : 2*/
+/* Fixed sized hashkey map. Revision : 2 */
 
 typedef struct {
    size_t size;    /* sizeof individual elem. */
