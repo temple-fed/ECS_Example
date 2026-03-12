@@ -36,7 +36,7 @@ ID generation uses the Splitmix64 algorithm, because it has very good bit covera
 ## Cool facts
 Running `find . -name "*.c" -o -name "*.h" | xargs wc -l`, the whole project is around ~500 significant lines. A simple component can be around ~40 lines, the system itself is suprisingly smaller than the map implementation and rendering code too.
 
-Running `size app -A` gives us a good idea of how much memory the globals take. `.bss` is the largest section, because around 4 mb is utilized by the entity registry.
+Running `size app -A` gives us a good idea of how much memory the globals take. `.bss` is the largest section, because around ~4 mb is utilized by the entity registry.
 
 ---
 Enjoy! - temple-fed | License : GPL3 (See LICENSE file)
