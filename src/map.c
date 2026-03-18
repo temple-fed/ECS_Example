@@ -4,14 +4,14 @@
 
 static uint64_t monostate = 1;
 
-static _inline
+static
 void _MapBeginLoop(mapinfo_t *map, id_t id, size_t *bucketposp, void **structbegp){
    *bucketposp = id % map->bcnt;
    *structbegp = (uint8_t *) map->buff + map->size * (*bucketposp);
    return;
 }
 
-static _inline
+static
 void _MapLoopGet(mapinfo_t *map, size_t index, size_t bucketpos, id_t **idp, void *structbeg, void **structp){
    *idp     = &map->ids[bucketpos + index];
    *structp = (uint8_t *) structbeg + map->size * index;

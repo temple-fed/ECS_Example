@@ -3,7 +3,7 @@
 #include <components/color.h>
 #include <components/rect.h>
 
-static _inline
+static
 void _SetDrawClr(window_t *window, int r, int g, int b, int a){
    SDL_SetRenderDrawColor(window->renderer, (Uint8) r, (Uint8) g, (Uint8) b, (Uint8) a);
    return;
